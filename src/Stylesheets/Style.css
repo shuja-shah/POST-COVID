@@ -64,7 +64,8 @@ nav {
   color: var(--clr-text-sub);
 }
 
-.mobile {
+.mobile,
+.svgbutton {
   background-color: #fff;
   border: none;
   cursor: pointer;
@@ -93,6 +94,60 @@ nav {
   height: 10px;
   width: 13px;
   margin: 0 0.9rem;
+}
+
+#mobile_nav_pop_up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.mobile_nav_pop_up_content_links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mobile_nav_pop_up_content_links > a {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr-text-main);
+  margin: 2rem 1rem;
+}
+
+.mobile_nav_pop_up_content_links > a:hover {
+  color: var(--clr-text-special);
+  transition: all 0.2s ease-in-out;
+}
+
+.mobile_nav_pop_up_content_links > a:focus {
+  color: var(--clr-text-special);
+  transition: all 0.2s ease-in-out;
+}
+
+.mobile_nav_pop_up_content_close {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin: 2.54rem 2rem 1rem 0;
+}
+
+#close_nav {
+  fill: #272321;
+  height: 48px;
+  width: auto;
+  cursor: pointer;
+}
+
+#close_nav :hover {
+  fill: var(--clr-text-special);
+  transition: all 0.2s ease-in-out;
 }
 
 @media screen and (min-width: 768px) {

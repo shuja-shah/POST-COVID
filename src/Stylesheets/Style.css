@@ -19,3 +19,71 @@ ul {
 a {
   text-decoration: none;
 }
+
+.desktop {
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.intro > svg {
+  height: 32px;
+  width: auto;
+}
+
+.intro > h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.intro > span {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-text-sub);
+}
+
+.mobile {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile > svg {
+  height: 32px;
+  width: auto;
+  fill: var(--clr-text-main);
+}
+
+.mobile > svg:hover {
+  fill: var(--clr-text-special);
+}
+
+.mobile > svg:active {
+  fill: var(--clr-text-special);
+}
+
+.mobile > svg:focus {
+  fill: var(--clr-text-special);
+}

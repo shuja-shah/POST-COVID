@@ -87,3 +87,39 @@ nav {
 .mobile > svg:focus {
   fill: var(--clr-text-special);
 }
+
+#line_logo {
+  border-bottom: 5px solid var(--clr-text-main);
+  height: 10px;
+  width: 13px;
+  margin: 0 0.9rem;
+}
+
+@media screen and (min-width: 768px) {
+  .desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop > li {
+    margin: 0 1rem;
+    padding: 0.576rem;
+  }
+
+  .desktop > li > a {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--clr-text-main);
+  }
+
+  .desktop > li > a:hover {
+    color: var(--clr-text-special);
+    transition: all 0.2s ease-in-out;
+  }
+}

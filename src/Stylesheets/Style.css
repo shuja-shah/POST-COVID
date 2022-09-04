@@ -150,6 +150,43 @@ nav {
   transition: all 0.2s ease-in-out;
 }
 
+#Home { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+#intro {
+  color: #272321;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.special {
+  color: var(--clr-text-special);
+  font-weight: 600;
+}
+
+#headingSub{
+  color:var(--clr-text-sub);
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: 'Lato' , sans-serif;
+}
+.special2 {
+  font-weight: 700;
+  color: #272321;
+}
+
+#myWorld {
+  height: 270px;
+  width: 350px;
+  background-image: url('./Assets/world.png');
+  background-size: 100% 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 @media screen and (min-width: 768px) {
   .desktop {
     display: flex;

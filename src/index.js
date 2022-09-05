@@ -1,6 +1,7 @@
 import './Stylesheets/Style.css';
 import showMobileNav from './Modules/mobile_nav.js';
 import showCountries from './Modules/countries.js';
+import countryData from './Modules/searchCountry.js';
 
 const { DateTime } = require('luxon');
 
@@ -39,4 +40,27 @@ caches.open('covid').then((cache) => {
       showCountries(data);
     });
   });
+});
+
+const form = document.querySelector('.submition');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const country = document.getElementById('search-country').value;
+  if (country === '') {
+    const alert = document.createElement('div');
+    alert.classList.add('alert', 'alert-danger');
+
+    alert.innerHTML = `
+    Please Enter A Valid Country.
+ `;
+    const parentNode = document.querySelector('.submition');
+    const refrenceNode = document.querySelector('.submit');
+    parentNode.insertBefore(alert, refrenceNode);
+    setTimeout(() => {
+      form.removeChild(alert);
+    }, 3000);
+  } else {
+    countryData(country);
+    document.getElementById('search-country').value = '';
+  }
 });

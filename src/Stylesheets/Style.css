@@ -89,7 +89,8 @@ nav {
   fill: var(--clr-text-special);
 }
 
-#line_logo {
+#line_logo,
+.line_logo {
   border-bottom: 5px solid var(--clr-text-main);
   height: 10px;
   width: 13px;
@@ -150,6 +151,109 @@ nav {
   transition: all 0.2s ease-in-out;
 }
 
+#Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#intro {
+  color: #272321;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.special {
+  color: var(--clr-text-special);
+  font-weight: 600;
+}
+
+#headingSub {
+  color: var(--clr-text-sub);
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: 'Lato', sans-serif;
+}
+
+.special2 {
+  font-weight: 700;
+  color: #272321;
+}
+
+#myWorld {
+  height: 270px;
+  width: 350px;
+  background-image: url('./Assets/world.png');
+  background-size: 100% 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+table {
+  font-family: 'Lato', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+  font-family: 'Lato', sans-serif;
+}
+
+.intro-sec {
+  display: flex;
+  flex-direction: column;
+  padding: 1.65rem 0;
+}
+
+.intro-sec > h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--clr-text-main);
+  margin: 0 0 0 1rem;
+}
+
+#users-country {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+#users-country > h5 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--clr-text-main);
+}
+
+#user-country > form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.submit {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+}
+
 @media screen and (min-width: 768px) {
   .desktop {
     display: flex;
@@ -176,5 +280,22 @@ nav {
   .desktop > li > a:hover {
     color: var(--clr-text-special);
     transition: all 0.2s ease-in-out;
+  }
+
+  #Home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 54px;
+  }
+
+  #myWorld {
+    background-size: cover;
+    width: 600px;
+    height: 300px;
+    margin-left: auto;
+  }
+
+  .intro > h2 {
+    font-size: 1.5rem;
   }
 }

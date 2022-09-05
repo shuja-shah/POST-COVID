@@ -1,4 +1,3 @@
-/* create a table, show top 10 countries with most cases */
 const showCountries = (data) => {
   const table = document.createElement('table');
   table.setAttribute('id', 'countries');

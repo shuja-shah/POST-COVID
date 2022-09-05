@@ -1,5 +1,6 @@
 import './Stylesheets/Style.css';
 import showMobileNav from './Modules/mobile_nav.js';
+import showCountries from './Modules/countries.js';
 
 const { DateTime } = require('luxon');
 
@@ -28,6 +29,14 @@ caches.open('covid').then((cache) => {
       const parentNode = document.getElementById('Home');
       const refrenceNode = document.getElementById('myWorld');
       parentNode.insertBefore(Intro, refrenceNode);
+    });
+  });
+});
+
+caches.open('covid').then((cache) => {
+  cache.match('https://covid-api.mmediagroup.fr/v1/cases/').then((response) => {
+    response.json().then((data) => {
+      showCountries(data);
     });
   });
 });

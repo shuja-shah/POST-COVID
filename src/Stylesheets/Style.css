@@ -280,4 +280,20 @@ td {
     color: var(--clr-text-special);
     transition: all 0.2s ease-in-out;
   }
+
+  #Home{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 54px;
+  }
+
+  #myWorld {
+    background-size: cover;
+    width: 600px;
+  }
+
+  .intro > h2 {
+    font-size: 1.5rem;
+  }
+
 }

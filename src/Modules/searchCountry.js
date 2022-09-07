@@ -64,7 +64,6 @@ const countryData = (country) => {
             </tr>
           </tbody>
         </table>
-        <a href="http://www.google.com/search?q=${countryName}" target="_blank" class="btn btn-primary">Search ${countryName} on Google</a>
         <button class = "btn btn-primary">Search Another Country</button>
             `;
           const parentNode = document.getElementById('Cases');

@@ -208,6 +208,8 @@ td {
   text-align: left;
   padding: 8px;
   font-family: 'Lato', sans-serif;
+  color: var(--clr-text-sub);
+  font-size: 0.9rem;
 }
 
 .intro-sec {
@@ -267,6 +269,7 @@ td {
 .none {
   display: none;
 }
+
 
 @media screen and (min-width: 768px) {
   .desktop {

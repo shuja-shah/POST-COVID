@@ -4,6 +4,7 @@ import showCountries from './Modules/countries.js';
 import countryData from './Modules/searchCountry.js';
 import ppa from './Stylesheets/Assets/ppa.png';
 import ppa2 from './Stylesheets/Assets/ppa2.png';
+import world from './Stylesheets/Assets/world.png';
 
 const { DateTime } = require('luxon');
 
@@ -70,9 +71,15 @@ form.addEventListener('submit', (e) => {
 const about = document.getElementById('about');
 const img1 = document.createElement('img');
 img1.src = ppa;
-img1.classList.add('mobile');
+img1.classList.add('mobile', 'mbimg');
 const img2 = document.createElement('img');
 img2.src = ppa2;
-img2.classList.add('desktop');
+img2.classList.add('desktop', 'deskimg');
 about.appendChild(img1);
 about.appendChild(img2);
+
+const home = document.getElementById('Home');
+const img3 = document.createElement('img');
+img3.src = world;
+img3.classList.add('world');
+home.appendChild(img3);

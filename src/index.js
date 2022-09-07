@@ -2,6 +2,8 @@ import './Stylesheets/Style.css';
 import showMobileNav from './Modules/mobile_nav.js';
 import showCountries from './Modules/countries.js';
 import countryData from './Modules/searchCountry.js';
+import ppa from './Stylesheets/Assets/ppa.png';
+import ppa2 from './Stylesheets/Assets/ppa2.png';
 
 const { DateTime } = require('luxon');
 
@@ -64,3 +66,13 @@ form.addEventListener('submit', (e) => {
     document.getElementById('search-country').value = '';
   }
 });
+
+const about = document.getElementById('about');
+const img1 = document.createElement('img');
+img1.src = ppa;
+img1.classList.add('mobile');
+const img2 = document.createElement('img');
+img2.src = ppa2;
+img2.classList.add('desktop');
+about.appendChild(img1);
+about.appendChild(img2);

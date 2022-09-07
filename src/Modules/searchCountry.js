@@ -18,7 +18,19 @@ const countryData = (country) => {
             parentNode.removeChild(alert);
           }, 2000);
         } else {
-          console.log(data[countryName].All.confirmed);
+          const thisCountry = document.createElement('article');
+          const countryConfirmed = data[countryName].All.confirmed;
+          const countryRecovered = data[countryName].All.recovered;
+          const countryDeaths = data[countryName].All.deaths;
+          thisCountry.classList.add('userCountry');
+          thisCountry.innerHTML = `
+          <h5 id = "countryName">${countryName}</h1>
+          <h6 id = "countryConfirmed">Confirmed Cases: ${countryConfirmed}</h6>
+          <h6 id = "countryRecovered">Recovered Cases: ${countryRecovered}</h6>
+          <h6 id = "countryDeaths">Deaths: ${countryDeaths}</h6>
+          `;
+          const parentNode = document.getElementById('Cases');
+          parentNode.appendChild(thisCountry);
         }
       });
     });

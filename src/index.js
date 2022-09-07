@@ -83,3 +83,13 @@ const img3 = document.createElement('img');
 img3.src = world;
 img3.classList.add('world');
 home.appendChild(img3);
+
+
+if (localStorage.getItem('firstVisit') === null) {
+  localStorage.setItem('firstVisit', 'false');
+  setTimeout(() => {
+    window.location.reload();
+  }, 1000);
+} else {
+  localStorage.setItem('firstVisit', 'true');
+}

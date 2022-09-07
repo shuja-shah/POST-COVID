@@ -29,7 +29,7 @@ const countryData = (country) => {
           thisCountry.classList.add('userCountry');
           thisCountry.innerHTML = `
           <div class="Countrycard intro-sec">
-            <h5 id = "countryName">${countryName}</h5>
+            <h5 id = "countryName" class ="userCountry">${countryName}</h5>
             <div class = "line_logo"></div>
           </div>
           <table class="table table-striped">
@@ -64,9 +64,18 @@ const countryData = (country) => {
             </tr>
           </tbody>
         </table>
+        <a href="http://www.google.com/search?q=${countryName}" target="_blank" class="btn btn-primary">Search ${countryName} on Google</a>
+        <button class = "btn btn-primary">Search Another Country</button>
             `;
           const parentNode = document.getElementById('Cases');
           parentNode.appendChild(thisCountry);
+          const form = document.querySelector('.submition');
+          form.classList.add('none');
+          const searchAgain = document.querySelector('.userCountry button');
+          searchAgain.addEventListener('click', () => {
+            parentNode.removeChild(thisCountry);
+            form.classList.remove('none');
+          });
         }
       });
     });

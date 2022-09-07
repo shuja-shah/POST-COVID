@@ -182,13 +182,11 @@ nav {
   color: #272321;
 }
 
-#myWorld {
-  height: 270px;
+.world {
+  height: auto;
   width: 350px;
-  background-image: url('./Assets/world.png');
-  background-size: 100% 80%;
-  background-position: center;
-  background-repeat: no-repeat;
+  order: 1;
+  margin-right: 0.5rem;
 }
 
 table {
@@ -208,6 +206,8 @@ td {
   text-align: left;
   padding: 8px;
   font-family: 'Lato', sans-serif;
+  color: var(--clr-text-sub);
+  font-size: 0.9rem;
 }
 
 .intro-sec {
@@ -232,16 +232,16 @@ td {
   margin: 1rem 0;
 }
 
-#users-country > h5 {
+.userCountry {
   font-family: 'Roboto', sans-serif;
   font-size: 1.35rem;
   font-weight: 600;
   color: var(--clr-text-main);
 }
 
-#user-country > form {
+.submition {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1rem 0;
@@ -252,6 +252,58 @@ td {
   font-size: 1rem;
   font-weight: 500;
   outline: none;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.none {
+  display: none;
+}
+
+h6 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--clr-text-main);
+  margin: 0 0 0 1rem;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.intro-det {
+  justify-self: flex-start;
+  align-self: flex-start;
+}
+
+.intro-det > p,
+.det {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--clr-text-sub);
+  margin: 0 0 0 1rem;
+  text-align: center;
+}
+
+.mbimg {
+  justify-self: center;
+  align-self: center;
+  width: auto;
+  height: 300px;
+  margin-top: 2rem;
+  margin-left: 2.2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -288,14 +340,27 @@ td {
     padding-top: 54px;
   }
 
-  #myWorld {
-    background-size: cover;
-    width: 600px;
-    height: 300px;
+  .world {
+    grid-column-start: -1;
+    width: 650px;
+    height: auto;
     margin-left: auto;
   }
 
   .intro > h2 {
     font-size: 1.5rem;
+  }
+
+  #about {
+    display: grid;
+  }
+
+  .deskimg {
+    margin: auto;
+  }
+
+  .det {
+    text-align: left;
+    margin-left: 0;
   }
 }

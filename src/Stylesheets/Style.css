@@ -183,11 +183,10 @@ nav {
 }
 
 .world {
- height: auto;
+  height: auto;
   width: 350px;
- order: 1;
- margin-right: 0.5rem;
-
+  order: 1;
+  margin-right: 0.5rem;
 }
 
 table {
@@ -288,7 +287,8 @@ h6 {
   align-self: flex-start;
 }
 
-.intro-det > p  {
+.intro-det > p,
+.det {
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -341,7 +341,7 @@ h6 {
   }
 
   .world {
-    grid-column-start: -1 ;
+    grid-column-start: -1;
     width: 650px;
     height: auto;
     margin-left: auto;
@@ -350,10 +350,17 @@ h6 {
   .intro > h2 {
     font-size: 1.5rem;
   }
+
   #about {
     display: grid;
   }
-   .deskimg {
+
+  .deskimg {
     margin: auto;
-   }
+  }
+
+  .det {
+    text-align: left;
+    margin-left: 0;
+  }
 }
